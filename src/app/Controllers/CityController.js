@@ -10,10 +10,10 @@ export default {
     return res.json(cities);
   },
 
-  async create(req, res) {
+  async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
-      name: Yup.string().required(),
+      country: Yup.string().required(),
       video_id: Yup.number(),
     });
 
