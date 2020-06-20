@@ -1,0 +1,24 @@
+{
+  "name": "driven-listen-api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/timeoutguy/drive-listen-api",
+  "author": "Marcus Vinícius Souza Silva (timeoutguy)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.13",
+    "sucrase": "^3.15.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  }
+}
