@@ -8,7 +8,11 @@ class City extends Model {
     }, {
       sequelize
     })
-  }
+  };
+
+  static associate(models) {
+    this.belongsTo(models.Video, { foreignKey: 'video_id', as: 'video' });
+  };
 }
 
 export default City

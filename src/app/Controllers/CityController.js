@@ -1,10 +1,18 @@
 import * as Yup from 'yup'
 import City from '../Models/City';
+import Video from '../Models/Video';
 
 export default {
   async index(req, res) {
     const cities = await City.findAll({
       attributes: ['id', 'name', 'country', 'video_id'],
+      include: [
+        {
+          model: Video,
+          as: 'video',
+          attributes: ['id', 'name', 'path', 'url']
+        }
+      ]
     });
 
     return res.json(cities);

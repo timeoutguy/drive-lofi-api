@@ -11,4 +11,4 @@ City.init(connection);
 Video.init(connection);
 Admin.init(connection);
 
-Video.associate(connection.models);
+City.associate(connection.models);
