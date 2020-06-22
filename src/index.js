@@ -1,5 +1,6 @@
 import express from 'express';
 import { resolve } from 'path'
+import 'dotenv/config';
 
 import routes from './routes';
 
@@ -12,4 +13,4 @@ app.use('/videos', express.static(resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 
-app.listen(3333, () => console.log("Running on http://localhost:3333"));
+app.listen(process.env.APP_PORT, () => console.log(`Running on ${process.env.APP_URL}`));
